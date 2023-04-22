@@ -11,6 +11,7 @@ package com.mycompany.guessnumber;
 public class GuessNumber {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int numberChoose = (int) (Math.random() * 100);
+        System.out.println(numberChoose);
     }
 }
