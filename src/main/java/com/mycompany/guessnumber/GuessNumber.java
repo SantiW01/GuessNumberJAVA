@@ -13,12 +13,10 @@ public class GuessNumber {
     public static void main(String[] args) {
         int numberChoose = (int) (Math.random() * 100);
         Scanner userEntry = new Scanner(System.in);
-        int numberGuess = userEntry.nextInt();
-        if(numberChoose == numberGuess) {
-            System.out.println("You win!");
-        } else {
-            System.out.println("You lose");
-            System.out.println(numberChoose);
-        }
+        int numberGuess = 0;
+       System.out.print("Enter a number: ");
+        while(numberGuess != numberChoose) {
+        numberGuess = userEntry.nextInt();   
+       }
     }
 }
