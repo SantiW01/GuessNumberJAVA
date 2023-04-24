@@ -11,12 +11,19 @@ import java.util.Scanner;
 public class GuessNumber {
 
     public static void main(String[] args) {
-        int numberChoose = (int) (Math.random() * 100);
+        int computerChoose = (int) (Math.random() * 100);
         Scanner userEntry = new Scanner(System.in);
-        int numberGuess = 0;
+        int userGuess = 0;
        System.out.print("Enter a number: ");
-        while(numberGuess != numberChoose) {
-        numberGuess = userEntry.nextInt();   
-       }
+        while(userGuess != computerChoose) {
+        userGuess = userEntry.nextInt();
+        if(userGuess > computerChoose) {
+            System.out.println("Number chosen by computer is smaller");
+        }
+           
+        if(userGuess < computerChoose) {
+            System.out.println("Number chosen by computer is greater");
+        }
+    }
     }
 }
