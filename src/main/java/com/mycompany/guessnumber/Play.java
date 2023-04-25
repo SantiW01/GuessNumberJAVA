@@ -10,8 +10,14 @@ package com.mycompany.guessnumber;
  */
 public class Play {
     public int Numbers(){
-        ComputerNumber computerNumber = new ComputerNumber();
-        computerNumber.SetComputerNumber((int) (100 * Math.random()));
-        return computerNumber.GetComputerNumber();
+        UserNumber numberChosen = new UserNumber();
+        numberChosen.SetNumber(numberChosen.EnterNumber());
+        return numberChosen.GetNumber();
     }
 }
+
+/* 
+ComputerNumber computerNumber = new ComputerNumber();
+        computerNumber.SetComputerNumber((int) (100 * Math.random()));
+        return computerNumber.GetComputerNumber();
+*/
