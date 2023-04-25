@@ -3,7 +3,6 @@
  */
 
 package com.mycompany.guessnumber;
-import java.util.Scanner;
 /**
  *
  * @author Santiago
@@ -11,12 +10,20 @@ import java.util.Scanner;
 public class GuessNumber {
     public static void main(String[] args) {
         Game game = new Game();
-        int firstNumber = game.ComputerNumber();
-        int secondNumber = game.UserNumber();
-        if(firstNumber == secondNumber) {
-            System.out.println("You win!");
-        } else {
-            System.out.println("You lose");
+        int firstNumber ;
+        int secondNumber = 0;
+        int tries = 0;
+        firstNumber = game.ComputerNumber();
+        while( secondNumber != firstNumber ){
+            secondNumber = game.UserNumber();
+            if(secondNumber > firstNumber){
+                System.out.println("Number chosen is greater than chosen by Computer");
+            }
+            if(secondNumber < firstNumber ) {
+                System.out.println("Number chosen is smaller than chosen by Computer");
+            }
+            tries++;
         }
+        System.out.println("You guess the number after " + tries + " tries.");
     }
 }
