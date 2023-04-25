@@ -9,9 +9,14 @@ import java.util.Scanner;
  * @author Santiago
  */
 public class GuessNumber {
-
     public static void main(String[] args) {
-        Play play = new Play();
-        System.out.println(play.Numbers());
+        Game game = new Game();
+        int firstNumber = game.ComputerNumber();
+        int secondNumber = game.UserNumber();
+        if(firstNumber == secondNumber) {
+            System.out.println("You win!");
+        } else {
+            System.out.println("You lose");
+        }
     }
 }
