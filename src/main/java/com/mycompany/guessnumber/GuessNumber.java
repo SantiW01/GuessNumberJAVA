@@ -11,21 +11,7 @@ import java.util.Scanner;
 public class GuessNumber {
 
     public static void main(String[] args) {
-        int computerChoose = (int) (Math.random() * 100);
-        Scanner userEntry = new Scanner(System.in);
-        int userGuess = 0;
-        int tries = 0;
-        System.out.print("Enter a number: ");
-        while(userGuess != computerChoose) {
-            userGuess = userEntry.nextInt();
-            if(userGuess > computerChoose) {
-                System.out.println("Number chosen by computer is smaller");
-            }   
-            if(userGuess < computerChoose) {
-                System.out.println("Number chosen by computer is greater");
-            }
-            tries++;
-        }
-        System.out.print("You win! It took you " + tries + " tries");
+        Play play = new Play();
+        System.out.println(play.Numbers());
     }
 }
